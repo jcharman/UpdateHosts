@@ -37,5 +37,8 @@ IFS=$oldIFS
 mv /etc/hosts /etc/hosts.old
 mv $tempDir/hosts /etc/hosts
 
+# Delete the temporary directory
+rm -rf $tempDir
+
 # Restart PiHole to pull in the new records.
 pihole restartdns
