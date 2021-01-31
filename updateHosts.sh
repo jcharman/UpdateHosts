@@ -10,7 +10,7 @@ staticHosts=\
 tempDir=$(mktemp -d /tmp/updateHosts.XXXX)
 
 # Get the current DHCP leases back from PiHole.
-dhcpLeases=$(cat /etc/pihole/dhcp.leases | grep -v * | awk '{ print $3,$4 }')
+dhcpLeases=$(cat /etc/pihole/dhcp.leases | grep -v "*" | awk '{ print $3,$4 }')
 
 # Create a hosts file to use.
 touch $tempDir/hosts
